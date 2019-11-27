@@ -17,6 +17,7 @@ import { MainComponent } from './main/main.component';
 import { ArticleComponent } from './article/article.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SelectedDirective } from './shared/selected.directive';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ProjectsComponent } from './projects/projects.component';
     ArticleComponent,
     AboutComponent,
     ProjectsComponent,
+    SelectedDirective,
   ],
   imports: [
     BrowserModule,
