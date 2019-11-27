@@ -1,3 +1,10 @@
+/*
+ * @Author: huangfengqi
+ * @Date: 2019-11-26 16:58:08
+ * @LastEditors: huangfengqi
+ * @LastEditTime: 2019-11-27 14:57:09
+ * @FilePath: \FengQI\src\app\app.module.ts
+ */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,21 +15,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { LayoutComponent } from './layout/layout.component';
+import {AppRoutingModule} from './app-routinng.module';
+import { MainComponent } from './main/main.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
     NgZorroAntdModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
