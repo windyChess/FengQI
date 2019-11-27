@@ -2,7 +2,7 @@
  * @Author: huangfengqi
  * @Date: 2019-11-27 16:45:54
  * @LastEditors: huangfengqi
- * @LastEditTime: 2019-11-27 17:48:03
+ * @LastEditTime: 2019-11-27 17:50:23
  * @FilePath: \FengQI\src\app\shared\selected.directive.ts
  */
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
@@ -16,7 +16,6 @@ export class SelectedDirective {
               private rd:Renderer2) { }
 
   ngOnInit(){
-    console.log('--init--',this.el);
     const item = this.el.nativeElement.innerText;
     if(item === '首页'){
       this.rd.addClass(this.el.nativeElement,'a-selected');
@@ -34,10 +33,8 @@ export class SelectedDirective {
         this.rd.addClass(item,'a-unselected');
       }
     });
-
     this.rd.removeClass(this.el.nativeElement,'a-unselected');
     this.rd.addClass(this.el.nativeElement,'a-selected');
-    
   }
 
 }
